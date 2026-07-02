@@ -11,3 +11,4 @@ image: ./images/firefly3.avif
 ---
 
 ## 这是我的第一篇个人博客
+1
