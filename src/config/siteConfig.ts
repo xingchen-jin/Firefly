@@ -108,7 +108,6 @@ export const siteConfig: SiteConfig = {
 		bangumi: true,
 		// 相册页面开关
 		gallery: true,
-		anime:true
 	},
 
 	// 分类导航栏开关，在首页和归档页顶部显示分类快捷导航
@@ -175,20 +174,7 @@ export const siteConfig: SiteConfig = {
 		// 未列出的类型将按默认顺序排在后面
 		categoryOrder: ["anime", "book", "music", "game"],
 	},
-	anime: {
-		// Bilibili 配置
-		bilibili: {
-			// 你的 Bilibili 用户 UID
-			uid: "your_bilibili_uid",
-		},
-		// TMDB 配置（可选，需要能够访问 TMDB API）
-		tmdb: {
-			// TMDB API 密钥
-			apiKey: "your_tmdb_api_key",
-			// TMDB 列表 ID
-			listId: "your_list_id",
-		},
-	},
+
 
 	// 分页配置
 	pagination: {
