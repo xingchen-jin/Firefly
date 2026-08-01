@@ -8,7 +8,7 @@ tags:
   - 个人经历
 category: 个人
 draft: false
-image: ./images/firefly3.avif
+image: ./images/firefly1.avif
 ---
 
 ## 概要
