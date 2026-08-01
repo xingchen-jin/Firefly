@@ -10,7 +10,6 @@ tags:
   - Firefly
 category: 文章示例
 draft: true
-tags: [演示, 示例, Markdown, Firefly]
 slug: markdown-extended
 ---
 
