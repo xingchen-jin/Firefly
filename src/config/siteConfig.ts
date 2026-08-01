@@ -101,13 +101,14 @@ export const siteConfig: SiteConfig = {
 		// 友链页面开关
 		friends: true,
 		// 打赏页面开关
-		sponsor: true,
+		sponsor: false,
 		// 留言板页面开关，需要配置评论系统
 		guestbook: true,
 		// 番组计划页面开关，含追番、游戏、书籍和音乐
 		bangumi: true,
 		// 相册页面开关
 		gallery: true,
+		anime:true
 	},
 
 	// 分类导航栏开关，在首页和归档页顶部显示分类快捷导航
@@ -173,6 +174,20 @@ export const siteConfig: SiteConfig = {
 		// 可选值: "anime" | "book" | "music" | "game" | "real" (暂不支持"real"类型)
 		// 未列出的类型将按默认顺序排在后面
 		categoryOrder: ["anime", "book", "music", "game"],
+	},
+	anime: {
+		// Bilibili 配置
+		bilibili: {
+			// 你的 Bilibili 用户 UID
+			uid: "your_bilibili_uid",
+		},
+		// TMDB 配置（可选，需要能够访问 TMDB API）
+		tmdb: {
+			// TMDB API 密钥
+			apiKey: "your_tmdb_api_key",
+			// TMDB 列表 ID
+			listId: "your_list_id",
+		},
 	},
 
 	// 分页配置
