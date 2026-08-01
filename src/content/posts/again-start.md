@@ -1,5 +1,5 @@
 ---
-title: 我的编程学习之旅
+title: HELLO WORLD
 published: 2026-07-02
 pinned: false
 description: 分享编程学习经历
@@ -11,5 +11,4 @@ draft: false
 image: ./images/firefly3.avif
 ---
 
-我第一次接触编程是在高二。浙江高考可以选修技术这门课，分为通用技术和信息技术，各占50分。其中信息技术教的就是计算机相关。
-我们当时学的语言是python，1
+这是我的第一篇个人博客，用了Firefly框架。后续我会更新一些关于编程与游戏开发的相关内容。
