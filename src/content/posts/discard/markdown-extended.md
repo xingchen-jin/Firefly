@@ -243,7 +243,6 @@ export const siteConfig: SiteConfig = {
 
 </details>
 
-![Docusaurus](docusaurus.avif)
 
 ---
 
