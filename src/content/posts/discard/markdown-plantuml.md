@@ -8,6 +8,7 @@ tags:
   - Markdown
 category: 文章示例
 draft: true
+slug: markdown-plantuml
 ---
 
 ## Markdown 中 PlantUML 图表指南

@@ -24,6 +24,25 @@ export const ja: Translation = {
 	[Key.tableOfContents]: "目次",
 	[Key.tocEmpty]: "このページには目次がありません",
 	[Key.music]: "音楽",
+	[Key.dynamic]: "つぶやき",
+	[Key.latestDynamics]: "最新の投稿",
+	[Key.moreDynamics]: "もっと見る",
+	[Key.dynamicDescription]: "日々の短い思いや出来事を記録します。",
+	[Key.dynamicEmpty]: "まだ投稿がありません",
+	[Key.dynamicSearch]: "投稿を検索...",
+	[Key.dynamicNoResults]: "一致する投稿がありません",
+	[Key.dynamicLoading]: "投稿を読み込んでいます",
+	[Key.dynamicAllYears]: "すべての年",
+	[Key.dynamicLoadMore]: "さらに読み込む",
+	[Key.dynamicBackToList]: "投稿一覧へ戻る",
+	[Key.dynamicProfile]: "{name}のプロフィールを見る",
+	[Key.dynamicPermalink]: "この投稿への固定リンク",
+	[Key.dynamicCollapseGallery]: "閉じる",
+	[Key.dynamicViewOriginal]: "拡大表示",
+	[Key.dynamicPreviousImage]: "前の画像",
+	[Key.dynamicNextImage]: "次の画像",
+	[Key.dynamicViewImage]: "画像 {index} を表示",
+	[Key.dynamicSelectImage]: "画像 {index} に切り替え",
 	[Key.musicNoPlaying]: "再生中なし",
 	[Key.musicLyrics]: "歌詞",
 	[Key.musicVolume]: "音量",
@@ -153,6 +172,45 @@ export const ja: Translation = {
 	[Key.bangumiUpdatedAt]: "ビルド時間",
 	[Key.bangumiDataStatic]: "静的データ",
 
+	// 追番（アニメ追跡）
+	[Key.anime]: "追番",
+	[Key.animeSubtitle]: "私のアニメ追跡リスト、Bilibili と TMDB からデータ取得",
+	[Key.animeTotal]: "合計",
+	[Key.animeAverageRating]: "平均評価",
+	[Key.animeSearch]: "アニメを検索...",
+	[Key.animeAllTypes]: "すべて",
+	[Key.animeTV]: "TV アニメ",
+	[Key.animeMovie]: "映画",
+	[Key.animeRatingDesc]: "評価が高い順",
+	[Key.animeRatingAsc]: "評価が低い順",
+	[Key.animeDateDesc]: "新しい順",
+	[Key.animeDateAsc]: "古い順",
+	[Key.animeNoResults]: "一致するアニメが見つかりません",
+	[Key.animeLastUpdated]: "データ更新",
+	[Key.animeSource]: "データソース",
+	[Key.animeEpStatus]: "進捗",
+	[Key.animeViewDetails]: "詳細を見る",
+	[Key.animeNotConfigured]: "アニメデータソースが未設定",
+	[Key.animeNotConfiguredDesc]:
+		"src/config/siteConfig.ts で Bilibili UID または TMDB API Key を設定してください",
+	[Key.animeBilibiliAvg]: "Bilibili 平均",
+	[Key.animeTmdbAvg]: "TMDB 平均",
+	[Key.animeDualSynced]: "デュアル同期済み",
+	[Key.animeNoOverview]: "あらすじなし",
+	[Key.animeClose]: "閉じる",
+	[Key.animeSynopsis]: "あらすじ",
+	[Key.animeWatchNow]: "今すぐ視聴",
+	[Key.animeViewTmdb]: "TMDB 詳細を見る",
+	[Key.animeAllWithCount]: "すべて ({count})",
+	[Key.animeTVWithCount]: "TV ({count})",
+	[Key.animeMovieWithCount]: "映画 ({count})",
+	[Key.animeTypeAnime]: "アニメ",
+	[Key.animeTypeMovie]: "映画",
+	[Key.animeTypeDocumentary]: "ドキュメンタリー",
+	[Key.animeTypeChinese]: "中国アニメ",
+	[Key.animeTypeDrama]: "ドラマ",
+	[Key.animeTypeConcert]: "コンサート",
+
 	// ページネーション
 	[Key.paginationFirst]: "最初",
 	[Key.paginationPrev]: "前へ",
@@ -241,6 +299,16 @@ export const ja: Translation = {
 	[Key.overlayBlur]: "背景ぼかし",
 	[Key.overlayCardOpacity]: "カード透明度",
 
+	// 設定パネルタブ
+	[Key.settingsTabAppearance]: "外観",
+	[Key.settingsTabWallpaper]: "壁紙",
+	[Key.settingsTabEffects]: "エフェクト",
+
+	// カードスタイル
+	[Key.cardSettings]: "カードスタイル",
+	[Key.cardBorder]: "カードのボーダーと影",
+	[Key.cardFollowTheme]: "カードのテーマカラー追随",
+
 	// 投稿リストレイアウト
 	[Key.postListLayout]: "投稿リストレイアウト",
 	[Key.postListLayoutList]: "リスト",
@@ -271,6 +339,7 @@ export const ja: Translation = {
 	// サイト統計
 	[Key.siteStats]: "サイト統計",
 	[Key.siteStatsPostCount]: "記事",
+	[Key.siteStatsDynamicCount]: "投稿",
 	[Key.siteStatsCategoryCount]: "カテゴリー",
 	[Key.siteStatsTagCount]: "タグ",
 	[Key.siteStatsTotalWords]: "総文字数",
@@ -350,4 +419,11 @@ export const ja: Translation = {
 	[Key.passwordError]: "パスワードが間違っています。もう一度お試しください。",
 	[Key.passwordProtectedRss]:
 		"この記事は暗号化されています。ウェブサイトにアクセスしてご覧ください。",
+
+	// 背景動画プレイヤー
+	[Key.videoPlay]: "背景動画を再生",
+	[Key.videoPause]: "背景動画を一時停止",
+	[Key.videoPrev]: "前の動画",
+	[Key.videoNext]: "次の動画",
+	[Key.videoLoadError]: "動画の読み込みに失敗しました",
 };

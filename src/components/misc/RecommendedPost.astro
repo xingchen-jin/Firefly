@@ -21,7 +21,7 @@ const noRandomPostsText = i18n(I18nKey.noRandomPosts);
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
   {/* 左栏：相关文章（静态） */}
   <div class="card-base p-5 md:p-6 flex flex-col">
-    <div class="flex items-center gap-2 pb-3 mb-1 border-b border-dashed border-(--line-divider)">
+    <div class="flex items-center gap-2 pb-3 mb-1 border-b border-(--line-divider)">
       <Icon is:inline
         name="material-symbols:signpost"
         class="text-xl text-(--primary)"
@@ -52,7 +52,7 @@ const noRandomPostsText = i18n(I18nKey.noRandomPosts);
             </div>
             <div class="flex items-center gap-1.5 text-xs text-black/30 dark:text-white/30 transition mt-0.5">
               {post.data.category && (
-                <span class="shrink-0 px-1.5 py-0.5 rounded bg-black/5 dark:bg-white/10 text-black/40 dark:text-white/40">
+                <span class="shrink-0 px-1.5 py-0.5 rounded-sm bg-black/5 dark:bg-white/10 text-black/40 dark:text-white/40">
                   {post.data.category}
                 </span>
               )}
@@ -75,7 +75,7 @@ const noRandomPostsText = i18n(I18nKey.noRandomPosts);
 
   {/* 右栏：随机文章（客户端 fetch 渲染） */}
   <div class="card-base p-5 md:p-6 flex flex-col">
-    <div class="flex items-center gap-2 pb-3 mb-1 border-b border-dashed border-(--line-divider)">
+    <div class="flex items-center gap-2 pb-3 mb-1 border-b border-(--line-divider)">
       <Icon is:inline
         name="material-symbols:recommend"
         class="text-xl text-(--primary)"
@@ -170,7 +170,7 @@ function renderRandomPosts() {
 
       if (post.category) {
         var cat = document.createElement('span');
-        cat.className = 'shrink-0 px-1.5 py-0.5 rounded bg-black/5 dark:bg-white/10 text-black/40 dark:text-white/40';
+        cat.className = 'shrink-0 px-1.5 py-0.5 rounded-sm bg-black/5 dark:bg-white/10 text-black/40 dark:text-white/40';
         cat.textContent = post.category;
         meta.appendChild(cat);
       }

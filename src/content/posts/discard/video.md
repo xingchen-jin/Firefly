@@ -8,6 +8,7 @@ tags:
   - Firefly
 category: 文章示例
 draft: true
+slug: video
 ---
 
 只需从 YouTube 或其他平台复制嵌入代码，然后将其粘贴到 markdown 文件中。

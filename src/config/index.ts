@@ -9,11 +9,14 @@ export type {
 	BackgroundWallpaperConfig,
 	CommentConfig,
 	CoverImageConfig,
+	DisplaySettingsConfig,
+	DynamicConfig,
 	ExpressiveCodeConfig,
 	FooterConfig,
 	GalleryAlbum,
 	GalleryConfig,
 	LicenseConfig,
+	MermaidConfig,
 	MusicPlayerConfig,
 	NavBarConfig,
 	PlantUMLConfig,
@@ -28,6 +31,12 @@ export type {
 	WidgetComponentType,
 	WidgetSpecificConfig,
 } from "../types/config";
+export type {
+	BuiltinFontProvider,
+	CustomFontProvider,
+	FontDefinition,
+	FontSelectionConfig,
+} from "../types/fontConfig"; // 字体类型定义
 export { analyticsConfig } from "./analyticsConfig"; // 统计分析配置
 export { announcementConfig } from "./announcementConfig"; // 公告配置
 // 样式配置
@@ -35,14 +44,17 @@ export { backgroundWallpaper } from "./backgroundWallpaper"; // 背景壁纸配�
 // 功能配置
 export { commentConfig } from "./commentConfig"; // 评论系统配置
 export { coverImageConfig } from "./coverImageConfig"; // 封面图配置
+export { displaySettingsConfig } from "./displaySettingsConfig"; // 显示设置面板开关配置
+export { dynamicConfig } from "./dynamicConfig"; // 动态页面配置
 export { sakuraConfig } from "./effectsConfig"; // 动画特效配置（樱花等）
 export { expressiveCodeConfig } from "./expressiveCodeConfig"; // 代码高亮配置
-export { fontConfig } from "./fontConfig"; // 字体配置
+export { fontConfig, fontsList } from "./fontConfig"; // 字体配置
 export { footerConfig } from "./footerConfig"; // 页脚配置
 export { friendsPageConfig, getEnabledFriends } from "./friendsConfig"; // 友链配置
 export { galleryConfig } from "./galleryConfig"; // 相册配置
 export { licenseConfig } from "./licenseConfig"; // 许可证配置
 // 组件配置
+export { mermaidConfig } from "./mermaidConfig"; // Mermaid 图表配置
 export { musicPlayerConfig } from "./musicConfig"; // 音乐播放器配置
 export { navBarConfig, navBarSearchConfig } from "./navBarConfig"; // 导航栏配置与搜索配置
 export { live2dWidgetConfig, spineModelConfig } from "./pioConfig"; // 看板娘配置

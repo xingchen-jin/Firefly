@@ -21,6 +21,27 @@ enum I18nKey {
 	tocEmpty = "tocEmpty",
 	music = "music",
 
+	// 动态
+	dynamic = "dynamic",
+	latestDynamics = "latestDynamics",
+	moreDynamics = "moreDynamics",
+	dynamicDescription = "dynamicDescription",
+	dynamicEmpty = "dynamicEmpty",
+	dynamicSearch = "dynamicSearch",
+	dynamicNoResults = "dynamicNoResults",
+	dynamicLoading = "dynamicLoading",
+	dynamicAllYears = "dynamicAllYears",
+	dynamicLoadMore = "dynamicLoadMore",
+	dynamicBackToList = "dynamicBackToList",
+	dynamicProfile = "dynamicProfile",
+	dynamicPermalink = "dynamicPermalink",
+	dynamicCollapseGallery = "dynamicCollapseGallery",
+	dynamicViewOriginal = "dynamicViewOriginal",
+	dynamicPreviousImage = "dynamicPreviousImage",
+	dynamicNextImage = "dynamicNextImage",
+	dynamicViewImage = "dynamicViewImage",
+	dynamicSelectImage = "dynamicSelectImage",
+
 	// 公告栏
 	announcement = "announcement",
 	announcementClose = "announcementClose",
@@ -149,6 +170,44 @@ enum I18nKey {
 	bangumiUpdatedAt = "bangumiUpdatedAt",
 	bangumiDataStatic = "bangumiDataStatic",
 
+	// 追番
+	anime = "anime",
+	animeSubtitle = "animeSubtitle",
+	animeTotal = "animeTotal",
+	animeAverageRating = "animeAverageRating",
+	animeSearch = "animeSearch",
+	animeAllTypes = "animeAllTypes",
+	animeTV = "animeTV",
+	animeMovie = "animeMovie",
+	animeRatingDesc = "animeRatingDesc",
+	animeRatingAsc = "animeRatingAsc",
+	animeDateDesc = "animeDateDesc",
+	animeDateAsc = "animeDateAsc",
+	animeNoResults = "animeNoResults",
+	animeLastUpdated = "animeLastUpdated",
+	animeSource = "animeSource",
+	animeEpStatus = "animeEpStatus",
+	animeViewDetails = "animeViewDetails",
+	animeNotConfigured = "animeNotConfigured",
+	animeNotConfiguredDesc = "animeNotConfiguredDesc",
+	animeBilibiliAvg = "animeBilibiliAvg",
+	animeTmdbAvg = "animeTmdbAvg",
+	animeDualSynced = "animeDualSynced",
+	animeNoOverview = "animeNoOverview",
+	animeClose = "animeClose",
+	animeSynopsis = "animeSynopsis",
+	animeWatchNow = "animeWatchNow",
+	animeViewTmdb = "animeViewTmdb",
+	animeAllWithCount = "animeAllWithCount",
+	animeTVWithCount = "animeTVWithCount",
+	animeMovieWithCount = "animeMovieWithCount",
+	animeTypeAnime = "animeTypeAnime",
+	animeTypeMovie = "animeTypeMovie",
+	animeTypeDocumentary = "animeTypeDocumentary",
+	animeTypeChinese = "animeTypeChinese",
+	animeTypeDrama = "animeTypeDrama",
+	animeTypeConcert = "animeTypeConcert",
+
 	// 分页
 	paginationFirst = "paginationFirst",
 	paginationPrev = "paginationPrev",
@@ -233,6 +292,16 @@ enum I18nKey {
 	overlayBlur = "overlayBlur",
 	overlayCardOpacity = "overlayCardOpacity",
 
+	// 设置面板标签
+	settingsTabAppearance = "settingsTabAppearance",
+	settingsTabWallpaper = "settingsTabWallpaper",
+	settingsTabEffects = "settingsTabEffects",
+
+	// 卡片样式
+	cardSettings = "cardSettings",
+	cardBorder = "cardBorder",
+	cardFollowTheme = "cardFollowTheme",
+
 	// 文章布局
 	postListLayout = "postListLayout",
 	postListLayoutList = "postListLayoutList",
@@ -260,6 +329,7 @@ enum I18nKey {
 	// 站点统计
 	siteStats = "siteStats",
 	siteStatsPostCount = "siteStatsPostCount",
+	siteStatsDynamicCount = "siteStatsDynamicCount",
 	siteStatsCategoryCount = "siteStatsCategoryCount",
 	siteStatsTagCount = "siteStatsTagCount",
 	siteStatsTotalWords = "siteStatsTotalWords",
@@ -337,6 +407,13 @@ enum I18nKey {
 	passwordSubmit = "passwordSubmit",
 	passwordError = "passwordError",
 	passwordProtectedRss = "passwordProtectedRss",
+
+	// 背景视频播放器
+	videoPlay = "videoPlay",
+	videoPause = "videoPause",
+	videoPrev = "videoPrev",
+	videoNext = "videoNext",
+	videoLoadError = "videoLoadError",
 }
 
 export default I18nKey;
