@@ -2,7 +2,7 @@
 title: Unity暑期学习经历分享
 published: 2026-08-01
 pinned: false
-description: 分享编程学习经历
+description: 分享学习经历
 tags:
   - 编程
   - 个人经历
