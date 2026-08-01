@@ -41,3 +41,6 @@ package/
 .codex*
 .claude
 .mimocode
+
+# 忽略废弃的示例文章目录
+src/content/posts/discard/
