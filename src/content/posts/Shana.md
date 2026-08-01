@@ -8,6 +8,6 @@ tags:
   - 钉宫
 category: 动漫推荐
 draft: false
-image: ./images/firefly2.avif
+image: ./images/shana01.avif
 ---
 1
