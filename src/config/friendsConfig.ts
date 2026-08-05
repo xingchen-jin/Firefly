@@ -50,6 +50,15 @@ export const friendsConfig: FriendLink[] = [
 		weight: 8,
 		enabled: true,
 	},
+	{
+		title: "Astro",
+		imgurl: "https://profile-avatar.csdnimg.cn/8a33cbfbce7e46b9a88647bcd13cbd71_zhangay1998.jpg!1",
+		desc: "一名来自世界上最强国家进行秃头活动的青年，主要关注Unity引擎的项目开发引用。未来很长，一起努力 微信搜：呆呆敲代码的小Y ，可以领取我自己收藏的游戏资源和Unity素材资源哦！",
+		siteurl: "https://xiaoy.blog.csdn.net",
+		tags: ["blog"],
+		weight: 8,
+		enabled: true,
+	},
 ];
 
 // 获取启用的友链并进行排序
