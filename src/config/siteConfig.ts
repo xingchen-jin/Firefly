@@ -9,7 +9,7 @@ export const siteConfig: SiteConfig = {
 	title: "xingchen's blog",
 
 	// 站点副标题
-	subtitle: "Firefly",
+	subtitle: "xingchenのblog",
 
 	// 站点 URL
 	site_url: "https://072193.xyz",

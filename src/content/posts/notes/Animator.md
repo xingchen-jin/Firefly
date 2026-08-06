@@ -53,6 +53,10 @@ Unity的Animator会在OnEnable时，记录当前若干属性，若某一属性�
 - [Write Defaults的作用-CSDN博客](https://blog.csdn.net/yjy99yjy999/article/details/82730948)
 - [[Unity] AnimatorStates中的write defaults详解-CSDN博客](https://blog.csdn.net/rickshaozhiheng/article/details/77838379)
 
+---
+## 动画状态转换
+
+
 
 
 
