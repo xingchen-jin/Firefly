@@ -1,5 +1,5 @@
 ---
-title: Unity暑期学习经历分享
+title: Animator
 published: 2026-08-01
 pinned: false
 description: 分享学习经历
