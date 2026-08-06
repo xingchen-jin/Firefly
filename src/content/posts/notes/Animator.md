@@ -1,6 +1,6 @@
 ---
 title: Animator
-published: 2026-08-01
+published: 2026-08-06
 pinned: false
 description: Unity相关知识
 tags:
@@ -65,6 +65,9 @@ Unity的Animator会在OnEnable时，记录当前若干属性，若某一属性�
 - Interruption Source:表示哪些转换可以打断当前转换。
 
 ## 动画状态转换条件（Conditions）
+执行动画转换需要满足ExitTime和Conditions两个条件。 
+conditions可以和参数关联，设置转换条件。可以通过脚本修改参数做到动画转换的控制。
+
 
 
 
