@@ -34,6 +34,15 @@ export const galleryConfig: GalleryConfig = {
 			password: "123456",
 			passwordHint: "示例密码123456",
 		},
+		{
+			id: "pixiv",
+			name: "p站收藏",
+			description:
+				"笑是对身边的事物感到一瞬间的幸福而表现出来的东西。",
+			location: "地球",
+			date: "2026-08-06",
+			tags: ["pixiv", "画师"],
+		},
 	],
 
 	// 瀑布流最小列宽(px)，浏览器根据容器宽度自动计算列数，默认 240
