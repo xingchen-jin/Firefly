@@ -47,7 +47,7 @@ SetIKPosition（） 调整IKGoal位置。
 
 ## WriteDefault
 
-Unity的Animator会在OnEnable时，记录当前若干属性，若某一属性再动画曲线中未被修改则会用，默认值来覆盖
+Unity的Animator会在OnEnable时，记录当前若干属性，若某一属性再动画曲线中未被修改则会用，默认值来覆盖  
 可以参考的blogs：
 - [Unity的Write Defaults->从一个例子谈起 - Esfog - 博客园](https://www.cnblogs.com/Esfog/p/Unity_WriteDefaults.html)
 - [Write Defaults的作用-CSDN博客](https://blog.csdn.net/yjy99yjy999/article/details/82730948)
