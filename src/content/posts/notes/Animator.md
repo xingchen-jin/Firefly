@@ -85,6 +85,9 @@ conditions可以和参数关联，设置转换条件。可以通过脚本修改�
 - Current State Then Next State:   当前状态优先，同时考虑下一状态。
 - Next State Then Current State：下一状态优先，同时考虑当前状态。
 
+## BlendTree控制角色移动动画
+
+当我们移动角色时需要切换多个动画片段，这时就可以用到混合树（BlendTree）来进行过渡。
 
 
 
