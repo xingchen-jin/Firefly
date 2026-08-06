@@ -55,6 +55,16 @@ Unity的Animator会在OnEnable时，记录当前若干属性，若某一属性�
 
 ---
 ## 动画状态转换
+在不同动画状态间可以设置不同的转换（Transition），同一对状态间可以设置多个转换。
+有勾选Solo优先转换不考虑其他转换，Mute永远不执行。
+
+- hasExitTime：默认勾选，经过某段时间进行转换。
+- ExitTime：开始转换时间（比例值）
+- Fixed Duration:设置过渡时间单位（s或%）
+- Transition Offest:进入下一个动画状态的偏移量。
+- Interruption Source:表示哪些转换可以打断当前转换。
+
+## 动画状态转换条件（Conditions）
 
 
 
