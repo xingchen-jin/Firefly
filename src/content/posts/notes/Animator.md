@@ -66,10 +66,24 @@ Unity的Animator会在OnEnable时，记录当前若干属性，若某一属性�
 
 ## 动画状态转换条件（Conditions）
 执行动画转换需要满足ExitTime和Conditions两个条件。 
-conditions可以和参数关联，设置转换条件。可以通过脚本修改参数做到动画转换的控制。
+conditions可以和参数关联，设置转换条件。可以通过脚本修改参数做到动画转换的控制。 
+- 多条条件之间关系为逻辑与。  
+- 而Transtions之间的条件关系为逻辑或。 
+当设置Trigger为条件时，要注意若当前的条件开始未被执行，则trigger一直处于激活状态。   
 
+## Interruption动画过渡打断
 
+![](Pasted%20image%2020260806170033.png)
+当Interruption Source设置为**current State**，那么当前的转换就可以被部分同样的出发点出发的状态转换，为什么是部分，因为当勾选Oredered Interruption时，当前转换只能被优先级更高的打断。  
+![](Pasted%20image%2020260806170152.png)
+选中出发状态，Transitions排序越靠上优先级越高。
 
+当选为**next State**时，oredered被禁选。这时可以被终点状态出发的任何状态打断。  
+当多个转换被激活，优先执行优先级高的转换。
+
+**除此之外**
+- Current State Then Next State:   当前状态优先，同时考虑下一状态。
+- Next State Then Current State：下一状态优先，同时考虑当前状态。
 
 
 
