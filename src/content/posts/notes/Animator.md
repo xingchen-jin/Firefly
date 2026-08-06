@@ -2,7 +2,7 @@
 title: Animator
 published: 2026-08-01
 pinned: false
-description: 分享知识
+description: Unity相关知识
 tags:
   - 笔记
   - Unity
