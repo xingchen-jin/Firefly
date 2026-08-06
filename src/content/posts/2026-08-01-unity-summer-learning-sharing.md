@@ -4,8 +4,8 @@ published: 2026-08-01
 pinned: false
 description: 分享学习经历
 tags:
-  - 编程
   - 个人经历
+  - Unity
 category: 个人
 draft: false
 image: ./images/firefly1.avif
