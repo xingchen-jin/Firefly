@@ -73,9 +73,9 @@ conditions可以和参数关联，设置转换条件。可以通过脚本修改�
 
 ## Interruption动画过渡打断
 
-![](Pasted%20image%2020260806170033.png)
+![](images/Pasted%20image%2020260806170033.png)
 当Interruption Source设置为**current State**，那么当前的转换就可以被部分同样的出发点出发的状态转换，为什么是部分，因为当勾选Oredered Interruption时，当前转换只能被优先级更高的打断。  
-![](Pasted%20image%2020260806170152.png)
+![](images/Pasted%20image%2020260806170152.png)
 选中出发状态，Transitions排序越靠上优先级越高。
 
 当选为**next State**时，oredered被禁选。这时可以被终点状态出发的任何状态打断。  
