@@ -10,6 +10,18 @@ category: 知识分享
 draft: false
 image: ./images/VIS_SD_e25b.avif
 ---
+## Animator的属性
+- Controller：动画控制器
+- Avatar：骨骼绑定
+- ApplyRootMotion：是否开启rootMotion
+- Update Mode：刷新模式，重新计算每个骨骼节点，
+	- normal：与帧率同步（Update（））
+	- Animate Physics：与物理引擎同步（FixeUpdate（））
+	- Unscaied Time：忽略时间标尺TimeScale，其他与Normal一样
+- Culling Mode：剔除模式，当某个物体不被摄像机看到如何处理
+	- Always Animate： 不进行剔除
+	- Cull Update Transform：会剔除Ik之类的操作
+	- Cull Completely：完全停止动画
 
 ## 动画状态的基本属性
 
@@ -83,12 +95,56 @@ conditions可以和参数关联，设置转换条件。可以通过脚本修改�
 **除此之外**
 - Current State Then Next State:   当前状态优先，同时考虑下一状态。
 - Next State Then Current State：下一状态优先，同时考虑当前状态。
-
-## BlendTree控制角色移动动画
+## 角色移动动画时会出现的两个问题
+- 移动速度与动画播放速度不匹配
+- 角色出现滑步（个人认为是因为角色的位移与骨骼运动不匹配导致的）
+解决这两个问题就分别要用到混合树和rootMotion了。
+## 单变量混合树（1D BlendTree)
 
 当我们移动角色时需要切换多个动画片段，这时就可以用到混合树（BlendTree）来进行过渡。
+混合树可以右键直接创建。  
 
-混合树可以右键直接创建
+在混合树的inspector窗口可以在motion添加动画片段栏位，这些动画的切换时通过变量平滑控制的。
+- Blend Type：混合树类型控制
+- parameter：参数选择
+- 在1D的示意图中，横轴时参数的值，纵轴则是动画片段在blend tree的权重。
+- 不同权重动画可以进行混合播放
+- **动画片段管理面板**
+  + Motion：具体动画
+  + Threshold:动画切换阈值
+  + speed:动画播放速度
+  + 最后一列位是否镜像动画
+## rootMotion
+rootmotion会通过相对运动来移动游戏对象。
+在Animator组件勾选ApplyRootMotion，可以让角色在每次循环播放动画片段不返回起点而是接着运动。
+这样就可以让动画片段控制角色移动，这时角色速度受动画判断播放速度控制。
+注：root motion会考虑角色的scale
+#### Generic
+在Generic中Unity会通过指定根骨骼来应用root motion
+- Bake Into Poss:相关Transform当作动画而不是root motion来处理。若变化较大会有红灯提示。**勾选后游戏对象不会跟着移动，反之则会跟着移动**。所以有时像碰撞检测异常可能时着原因。
+![](images/Pasted%20image%2020260807200542.png)
+
+- Based Upon：对于Generic，可以选择Root Node Rotation（Generic）或Original，前者是让动画朝向由角色的根骨骼（unity会计算，一般不准）决定，后者是由动画本来朝向决定，由美术在制作动画时设定好
+- Offest:偏移量
+
+#### Humanoid
+在Humanoid总由于使用Avator系统，动画文件不再包含对具体骨骼的描述，所以不能指定根骨骼来应用root motion。
+unity为了解决着问题，通过分析骨骼结构，计算出模型的重心center of mass（又称body transform），unity又会通过重心在水平平面的投影，作为根节点，被称为root transform;
+RootMotion会把动画文件中描述的Root Transform的坐标和角度值，转换为相对位移和相对转角，并以此来移动游戏对象。
+
+![](images/Pasted%20image%2020260807193639.png)
+
+
+-  Based Upon：Body Orientation/Center of Mass，计算出的重心作为朝向，一般不太准。
+				Feet：用脚部骨骼
+## Root Motion 和 Blend Tree
+在Inspector中可以使用Compute Thresholds根据动画片段设置阈值，可以自动算出移动速度的平均值。注意这里的阈值是针对原本的骨骼的，而不同骨骼角色使用动画，移动速度会有所区别。
+**那么如何控制角色的移动速度呢？**
+可以在使用animator.speed/=animator.humanScale,就可以让同一个状态机下不同角色的移动速度保持一致。不过最好是把1/animator.humanScale的值传给multiplayer,只改变移动时的动画播放速度。
+
+若想修改速度，把动画播放速度设置为目标速度/阈值，把阈值设为目标速度，但实际上速度可能并不是恒定的，而是上下波动，这是因为rootMotion的移动速度本来就不一定匀速。
+
+我们可以把animator的速度给予rb组件，注意若把y分量上的赋值，人物会在下落时速度恒定一个很低的值，因为rb速度不断被重置，所以y分量上的不赋值就解决了。但是如果受到水平分量上的力又会出现同样的问题。
 
 
 
