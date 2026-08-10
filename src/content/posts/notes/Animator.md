@@ -146,6 +146,44 @@ RootMotion会把动画文件中描述的Root Transform的坐标和角度值，�
 
 我们可以把animator的速度给予rb组件，注意若把y分量上的赋值，人物会在下落时速度恒定一个很低的值，因为rb速度不断被重置，所以y分量上的不赋值就解决了。但是如果受到水平分量上的力又会出现同样的问题。
 
+## Animation Layer和Avatar Mask实现动画组合
+在Animator面板中可以创建多个Layer,在Layer可以点击齿轮就行设置
+![](images/Pasted%20image%2020260808220819.png)
+ 
+- Weight:权重，0则是不使用
+- Mask：动画蒙板，禁用Avator部位或骨骼
+- Blennding：可以选择覆盖Override或添加Additive（混合），选择Additive时该层级对应的avatar mask上必须有实际的动画curve才能添加。
+- Sync：同步，选中后可以选择当前层级与哪个层级保持一致
+- IK Pass：是否可以IK操作
+
+### 角色疲劳感制作
+可以使用Additive模式加设置权重的方式添加疲劳感。
+创建一个Layer作为疲劳层级，添加疲劳动画，添加模板（一般禁用四肢，为了在疲劳下四肢也能移动），然后再脚本中修改权重（animator.SetLayerWeight（））来达到逐渐疲劳的效果。
+
+### Sync和Timing做受伤状态
+
+当我们制作例如受伤状态，需要把一整套的受伤动画代替原有的动画，可以把新的Layer里复制一整套原有的层级，但随着开发，原有会有变化。
+这时可以用Sync同步，无论被同步如何改变，同步方都可以保持一致。而同步只是同步状态和状态间的转换关系，不会同步内部状态信息。比如这时后让一个空Layer同步原Layer，里面的动画片段都是空的。这样可以让新的Layer放入不同的动画表示进入了新的状态，比如受伤。你可以让角色处于受伤状态就行行走之类的操作，而不用手动设置新的转态转换是如何转换的。
+**但是不同的动画片段的时长不一定相同** 
+所以Unity会缩放就行同步的Layer里的时长，默认与被同步Layer里的一致。 
+**Timing（只能在Overrid下使用）**     
+Timing可以让同步层级与被同步层级共同决定动画时长。而权重决定时长更靠近哪个，当同步Layer的权重为1，则完全听同步的，如果为0.5则取平均时长，0则完全听被同步的。
+
+## Rigging配合IK
+### 使用步骤
+- 1，**先导入Rigging Animation**
+- 2，选中角色物体的Animator可以，点击Rig Setup,创建Rig Builder组件
+	- 点击Bone Render SetUp可以绘制骨骼（供在场景的点击）
+- 3，创建空子物体添加Rig组件，再传给Rig Builder，这样就可以管理Rig了
+-  4，在Rig下新加子物体添加Two Bone Ik Constraint组件作为约束
+	-  这个组件就是旋转Root和Mid两根骨骼，把Tip尽量放入Target上
+	- Hint：指定手肘关节位置防止扭曲
+	- Maintain Target Offest：是否保留tip与target原有差异
+## 遇到问题
+-  **不能在playMode下移动target，将Animator中片段均选择为WriteDefault问题解决**
+- 
+
+
 
 
 
