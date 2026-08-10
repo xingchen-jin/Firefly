@@ -181,7 +181,12 @@ Timing可以让同步层级与被同步层级共同决定动画时长。而权�
 	- Maintain Target Offest：是否保留tip与target原有差异
 ## 遇到问题
 -  **不能在playMode下移动target，将Animator中片段均选择为WriteDefault问题解决**
-- 
+
+## 关于Curve
+可以在动画片段的Inspector窗口中可以添加Curve，是一个参数，在动画播放时修改，如果在Animator有同名参数，会把值传递过去，这样就可在脚本中进行读取等操作。
+
+## 2D混合树
+
 
 
 
