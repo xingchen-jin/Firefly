@@ -8,7 +8,7 @@ tags:
   - Unity
 category: 知识分享
 draft: false
-image: ./images/VIS_SD_e25b.avif
+image: ./images/pixiv_notes_01.jpg
 ---
 ## Cinemachine Brain
 
