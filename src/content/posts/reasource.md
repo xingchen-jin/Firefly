@@ -19,6 +19,10 @@ image: ./images/pixiv_05.avif
 #### 3，菜鸟教程C#
 [C# 教程 | 菜鸟教程](https://www.runoob.com/csharp/csharp-tutorial.html)
 
+#### 4，面试题
+[2026年Unity面试题大全，共十万字面试题总结【收藏一篇足够面试，持续更新】_unity面试题2023-CSDN博客](https://blog.csdn.net/zhangay1998/article/details/131687288?spm=1001.2014.3001.5501)
+
+
 ## 资源素材
 #### 1，模之屋
 [专业模型创作分享社区_模之屋_PlayBox](https://www.aplaybox.com/model/model)
