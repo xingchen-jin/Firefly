@@ -22,6 +22,10 @@ image: ./images/pixiv_05.avif
 #### 4，面试题
 [2026年Unity面试题大全，共十万字面试题总结【收藏一篇足够面试，持续更新】_unity面试题2023-CSDN博客](https://blog.csdn.net/zhangay1998/article/details/131687288?spm=1001.2014.3001.5501)
 
+#### 5，计算机八股
+[小林coding - 从图解计算机到后端面试全攻略](https://xiaolincoding.com/)
+
+
 
 ## 资源素材
 #### 1，模之屋
