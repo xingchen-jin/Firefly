@@ -14,15 +14,19 @@ image: ./images/pixiv_05.avif
 ## 学习用
 #### 1，Unity用户手册
 [Unity User Manual 2022.3 (LTS) - Unity 手册](https://docs.unity.cn/cn/2022.3/Manual/UnityManual.html)
-#### 2，【Unity3D】Unity3D技术栈
+
+#### 2,C#手册
+[C# 文档 - 入门、教程、参考。 - A tour of C# | Microsoft Learn](https://learn.microsoft.com/zh-cn/dotnet/csharp/tour-of-csharp/)
+
+#### 3，【Unity3D】Unity3D技术栈
 [【Unity3D】Unity3D技术栈_unity技术栈-CSDN博客](https://blog.csdn.net/m0_37602827/article/details/128731256?spm=1001.2014.3001.5506)
-#### 3，菜鸟教程C#
+#### 4，菜鸟教程C#
 [C# 教程 | 菜鸟教程](https://www.runoob.com/csharp/csharp-tutorial.html)
 
-#### 4，面试题
+#### 5，面试题
 [2026年Unity面试题大全，共十万字面试题总结【收藏一篇足够面试，持续更新】_unity面试题2023-CSDN博客](https://blog.csdn.net/zhangay1998/article/details/131687288?spm=1001.2014.3001.5501)
 
-#### 5，计算机八股
+#### 6，计算机八股
 [小林coding - 从图解计算机到后端面试全攻略](https://xiaolincoding.com/)
 
 
