@@ -31,7 +31,7 @@ image: ./images/pixiv_05.avif
 
 
 
-## 资源素材
+# 资源素材
 #### 1，模之屋
 [专业模型创作分享社区_模之屋_PlayBox](https://www.aplaybox.com/model/model)
 
@@ -42,3 +42,9 @@ image: ./images/pixiv_05.avif
 
 免费人形动作素材
 
+## 3，  Poly Haven 3D模型
+[Poly Haven](https://polyhaven.com/zh)
+
+## 4 Itch.io
+
+https://itch.io/
