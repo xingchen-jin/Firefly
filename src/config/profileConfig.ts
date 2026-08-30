@@ -12,7 +12,7 @@ export const profileConfig: ProfileConfig = {
 	name: "xingchen",
 
 	// 个人签名
-	bio: "大家好，我是星尘！欢迎来到我的博客，这里记录了我的学习和生活点滴，希望能与大家一起成长！\n“种一棵树最好的时间是十年前，其次是现在”",
+	bio: "大家好，我是星尘！欢迎来到我的博客，这里记录了我的学习和生活点滴，希望能与大家一起成长！\n\n“种一棵树最好的时间是十年前，其次是现在”",
 
 	// 链接配置
 	// 已经预装的图标集：fa7-brands，fa7-regular，fa7-solid，material-symbols，simple-icons
