@@ -48,3 +48,12 @@ image: ./images/pixiv_05.avif
 ## 4 Itch.io
 
 https://itch.io/
+
+## GameJam
+#### 1，GMTK   2027 - 8- 12
+[GMTK游戏创作马拉松2027 - itch.io](https://itch.io/jam/gmtk-2027)
+#### 2，GGJ
+[Global Game Jam](https://globalgamejam.org/)
+
+#### 收集
+[GameJam 活动列表 - TapTap](https://www.taptap.cn/game-jam-list)
