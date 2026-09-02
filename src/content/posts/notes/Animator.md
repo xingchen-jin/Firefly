@@ -181,6 +181,7 @@ Timing可以让同步层级与被同步层级共同决定动画时长。而权�
 	- Maintain Target Offest：是否保留tip与target原有差异
 ## 遇到问题
 -  **不能在playMode下移动target，将Animator中片段均选择为WriteDefault问题解决**
+- **还有一个究极大坑，在playmode下修改target的引用是无效的，它会继续使用缓存中的，改进方法有把原先引用改到目标位置，或者重新构建RigBuilder刷新缓存来达到更换引用目的。
 
 ## 关于Curve
 可以在动画片段的Inspector窗口中可以添加Curve，是一个参数，在动画播放时修改，如果在Animator有同名参数，会把值传递过去，这样就可在脚本中进行读取等操作。
