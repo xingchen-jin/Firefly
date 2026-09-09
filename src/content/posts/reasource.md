@@ -61,3 +61,8 @@ https://itch.io/
 
 #### 收集
 [GameJam 活动列表 - TapTap](https://www.taptap.cn/game-jam-list)
+
+
+## 插件手册
+## 1，Behavior Desiginer
+[行为树基础 - Opsive](https://opsive.com/support/documentation/behavior-designer-pro/concepts/what-is-a-behavior-tree/)
