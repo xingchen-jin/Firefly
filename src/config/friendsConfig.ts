@@ -23,11 +23,11 @@ export const friendsPageConfig: FriendsPageConfig = {
 // 友链配置
 export const friendsConfig: FriendLink[] = [
 	{
-		title: "夏夜流萤",
+		title: "Amiya_desi",
 		imgurl:
-			"https://weavatar.com/avatar/d252655d40d6874417a720bad0a6c5f77f8f6a1fd2f882f8f338402dc37e4190?s=640",
-		desc: "飞萤之火自无梦的长夜亮起，绽放在终竟的明天。",
-		siteurl: "https://blog.cuteleaf.cn",
+			"https://blog.sayori.org",
+		desc: "miya_desi 参上！这里是 Amiya_desi 的博客！看到我摸鱼可以提醒我要学习了！ 我期待数据能拟合出我，帮我解决那些我一个人想不明白的东西，所以我要把这些都记录下来",
+		siteurl: "https://blog.sayori.org/assets/profile/avatar-sayori-optimized.jpg",
 		tags: ["Blog"],
 		weight: 10, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
@@ -56,7 +56,7 @@ export const friendsConfig: FriendLink[] = [
 		desc: "一名来自世界上最强国家进行秃头活动的青年，主要关注Unity引擎的项目开发引用。未来很长，一起努力 微信搜：呆呆敲代码的小Y ，可以领取我自己收藏的游戏资源和Unity素材资源哦！",
 		siteurl: "https://xiaoy.blog.csdn.net",
 		tags: ["blog"],
-		weight: 8,
+		weight: 7,
 		enabled: true,
 	},
 	{
@@ -65,7 +65,7 @@ export const friendsConfig: FriendLink[] = [
 		desc: "个人Blog，没事做点记录",
 		siteurl: "https://chaomeng.space/",
 		tags: ["blog"],
-		weight: 8,
+		weight: 6,
 		enabled: true,
 	},
 ];
