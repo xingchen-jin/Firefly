@@ -25,39 +25,12 @@ export const friendsConfig: FriendLink[] = [
 	{
 		title: "Amiya_desi",
 		imgurl:
-			"https://blog.sayori.org",
+			"https://blog.sayori.org/assets/profile/avatar-sayori-optimized.jpg",
 		desc: "miya_desi 参上！这里是 Amiya_desi 的博客！看到我摸鱼可以提醒我要学习了！ 我期待数据能拟合出我，帮我解决那些我一个人想不明白的东西，所以我要把这些都记录下来",
-		siteurl: "https://blog.sayori.org/assets/profile/avatar-sayori-optimized.jpg",
+		siteurl: "https://blog.sayori.org",
 		tags: ["Blog"],
 		weight: 10, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
-	},
-	{
-		title: "Firefly Docs",
-		imgurl: "https://docs-firefly.cuteleaf.cn/logo.png",
-		desc: "Firefly主题模板文档",
-		siteurl: "https://docs-firefly.cuteleaf.cn",
-		tags: ["Docs"],
-		weight: 9,
-		enabled: true,
-	},
-	{
-		title: "Astro",
-		imgurl: "https://avatars.githubusercontent.com/u/44914786?v=4&s=640",
-		desc: "The web framework for content-driven websites. ⭐️ Star to support our work!",
-		siteurl: "https://github.com/withastro/astro",
-		tags: ["Framework"],
-		weight: 8,
-		enabled: true,
-	},
-	{
-		title: "呆呆敲代码的小Y",
-		imgurl: "https://profile-avatar.csdnimg.cn/8a33cbfbce7e46b9a88647bcd13cbd71_zhangay1998.jpg!1",
-		desc: "一名来自世界上最强国家进行秃头活动的青年，主要关注Unity引擎的项目开发引用。未来很长，一起努力 微信搜：呆呆敲代码的小Y ，可以领取我自己收藏的游戏资源和Unity素材资源哦！",
-		siteurl: "https://xiaoy.blog.csdn.net",
-		tags: ["blog"],
-		weight: 7,
-		enabled: true,
 	},
 	{
 		title: "chaomeng",
@@ -65,7 +38,7 @@ export const friendsConfig: FriendLink[] = [
 		desc: "个人Blog，没事做点记录",
 		siteurl: "https://chaomeng.space/",
 		tags: ["blog"],
-		weight: 6,
+		weight: 9,
 		enabled: true,
 	},
 ];
