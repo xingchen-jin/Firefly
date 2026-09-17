@@ -53,6 +53,9 @@ image: ./images/pixiv_05.avif
 
 https://itch.io/
 
+## 5，免费可商用音乐
+[PeriTune - 免费音乐素材](https://peritune.com/#google_vignette)
+
 ## GameJam
 #### 1，GMTK   2027 - 8- 12
 [GMTK游戏创作马拉松2027 - itch.io](https://itch.io/jam/gmtk-2027)
