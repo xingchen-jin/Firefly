@@ -69,3 +69,7 @@ https://itch.io/
 ## 插件手册
 ## 1，Behavior Desiginer
 [行为树基础 - Opsive](https://opsive.com/support/documentation/behavior-designer-pro/concepts/what-is-a-behavior-tree/)
+
+## AI工具
+#### 像素绘画
+https://www.pixellab.ai/
