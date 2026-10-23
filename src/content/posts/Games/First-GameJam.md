@@ -8,7 +8,7 @@ tags:
   - 个人经历
 category: 游戏开发
 draft: false
-image: ./images/84064657_p0.jpg
+image: ./images/image_01.jpg
 ---
 **老实说，这是一次失败的GameJam。**
 这次参加TapTap聚光灯活动，本来有一个美术同学的，但实在是太忙了，只能自己搞力。
