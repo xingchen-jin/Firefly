@@ -1,6 +1,6 @@
 ---
 title: 记录我第一次参加的GameJam
-published: 2026-08-06
+published: 2026-10-23
 pinned: false
 description: 游戏开发好难
 tags:
