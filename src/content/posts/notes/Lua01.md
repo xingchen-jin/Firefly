@@ -56,6 +56,24 @@ print(str)                -- 你好，世界！
 -号如果单独放在变量/常量前，代表负号，比如 -A就是A的相反数  
 
 #### 条件运算符
+``> < >= <= == ~=``
 
 #### 逻辑运算符
- 
+``and  or  not``
+lua中 也遵循逻辑运算的 “短路” 规则
+```
+print( true and false)  -- false
+
+print( true and true)   -- true
+
+print( false and true)  -- false,不进行and后的判断，直接返回结果
+
+  
+
+print( true or false)  -- true ，不进行or后的判断，直接返回结果
+
+print( false or false)  -- false
+
+  
+print( not true)  -- false
+```
