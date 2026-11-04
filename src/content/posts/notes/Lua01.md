@@ -1,5 +1,5 @@
 ---
-title: Lua入门知识（未写完）
+title: Lua入门知识（更新中）
 published: 2026-11-02
 pinned: false
 description: Unity相关知识
