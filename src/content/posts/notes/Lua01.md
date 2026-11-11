@@ -1,5 +1,5 @@
 ---
-title: Lua入门知识（更新中）
+title: Lua入门（更新中）
 published: 2026-11-02
 pinned: false
 description: Unity相关知识
@@ -150,4 +150,85 @@ print(a)
 --ASCII码 转字符
 print(string.char(a))
 ```
+
+## 条件分支
+lua的条件分支逻辑和主流的高级语言区别不大，记住格式即可。 
+- 注：lua中没有switch语法
+#### 单分支
+格式为，条件为true时进入分支   
+```lua
+if 条件 then 
+	分支
+end 
+```
+#### 多分支
+多分支在单分支基础上，多了elseif 和else
+```lua
+if 条件 then 
+	分支1
+elseif 条件 then
+	分支2
+elseif 条件 then
+	分支3
+else
+	分支
+end 
+```
+当所有都不满足时进入else  
+
+## 循环
+#### for循环
+
+**for循环，包含结尾**
+
+```lua
+for i =2,5 do --默认递增 i会默认+1,从2输出到5
+
+    print(i)
+
+end
+
+for i =1,5,2 do --如果要自定义增量 直接逗号后面写
+
+    print(i)
+
+end
+
+for i =5,1,-1 do --如果要自定义增量 直接逗号后面写
+
+    print(i)
+
+end
+
+```
+#### while循环
+```lua
+while num < 5 do   --满足条件进入循环体
+
+    print(num)
+
+    num = num + 1
+
+end
+```
+
+#### repeat(do - while)最特殊
+格式为
+```lua
+repeat 
+	循环体
+until 条件
+```
+
+```lua
+--例子
+repeat
+
+    print(num)
+
+    num = num + 1
+
+until num > 5 --满足条件跳出 结束条件
+```
+ **必定循环一次，满足条件则退出**
 
