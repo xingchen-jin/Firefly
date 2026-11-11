@@ -9,7 +9,7 @@ tags:
   - Lua
 category: 知识分享
 draft: false
-image: ./images/Lua01_Cover.avif
+image: ./images/Baiye.jpg
 ---
 ## 一，前情提要
 本文章是我将近期学习的lua语法整理并分享。主要是复习用，也可以学习入门，由于我不想从0开始解释什么是变量，什么是函数，所以阅读本文章，**可能需要有一定编程基础**。   
