@@ -12,7 +12,7 @@ export const siteConfig: SiteConfig = {
 	subtitle: "xingchenのblog",
 
 	// 站点 URL
-	site_url: "https://072193.xyz",
+	site_url: "https://xingchen-blog.com",
 
 	// 站点描述
 	description:
