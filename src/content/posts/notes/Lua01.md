@@ -70,18 +70,10 @@ print(str)                -- 你好，世界！
 lua中 也遵循逻辑运算的 “短路” 规则
 ```
 print( true and false)  -- false
-
 print( true and true)   -- true
-
 print( false and true)  -- false,不进行and后的判断，直接返回结果
-
-  
-
 print( true or false)  -- true ，不进行or后的判断，直接返回结果
-
 print( false or false)  -- false
-
-  
 print( not true)  -- false
 ```
 
@@ -102,7 +94,6 @@ s = [[今天
 真好呀
 我们去散步吧
 ]]
-
 print(s)    --今天
             --天气
             --真好呀
@@ -117,11 +108,8 @@ print(s)    --今天
 比如
 ```
 print(string.format("再见，%d", 2026)) -- 再见，2026
-
 --%d :与数字拼接
-
 --%a：与任何字符拼接
-
 --%s：与字符配对
 ```
 
@@ -187,32 +175,23 @@ end
 
 ```lua
 for i =2,5 do --默认递增 i会默认+1,从2输出到5
-
     print(i)
-
 end
 
 for i =1,5,2 do --如果要自定义增量 直接逗号后面写
-
     print(i)
-
 end
 
 for i =5,1,-1 do --如果要自定义增量 直接逗号后面写
-
     print(i)
-
 end
 
 ```
 #### while循环
 ```lua
 while num < 5 do   --满足条件进入循环体
-
     print(num)
-
     num = num + 1
-
 end
 ```
 
@@ -227,11 +206,8 @@ until 条件
 ```lua
 --例子
 repeat
-
     print(num)
-
     num = num + 1
-
 until num > 5 --满足条件跳出 结束条件
 ```
  **必定循环一次，满足条件则退出**
@@ -465,7 +441,7 @@ print("数组长度："..#bb) --数组长度：3
 - 情况3，连续跳两个数，不中断读取。遍历后会发现中间空的部分是nil
 - 情况4，最后跳一个属，最后一个数不记录长度。
 
-这些深坑是lua底层实现原理造成的，理论上找出底层代码，就可以分析为什么。~~嘻嘻，我没找
+这些深坑是lua底层实现原理造成的，理论上找出底层代码，就可以分析为什么。~~嘻嘻，我没找~~
 
 
 #### pairs和ipairs迭代器遍历
