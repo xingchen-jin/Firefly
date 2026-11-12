@@ -2,7 +2,7 @@
 title: Lua入门（更新中）
 published: 2026-11-11
 pinned: false
-description: Unity相关知识
+description: 一个详细的lua入门攻略
 tags:
   - 笔记
   - Unity
