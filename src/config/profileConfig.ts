@@ -12,7 +12,7 @@ export const profileConfig: ProfileConfig = {
 	name: "xingchen",
 
 	// 个人签名
-	bio: "大家好，我是星尘！欢迎来到我的博客，这里记录了我的学习和生活点滴，希望能与大家一起成长！\n\n“种一棵树最好的时间是十年前，其次是现在”",
+	bio: "大家好，我是星尘！欢迎来到我的博客，这里记录了我的学习和生活点滴，希望能与大家一起成长！\n\n“种一棵树最好的时间是十年前，其次是现在\n邮箱: jinzi0619@163.com”",
 
 	// 链接配置
 	// 已经预装的图标集：fa7-brands，fa7-regular，fa7-solid，material-symbols，simple-icons
@@ -36,7 +36,7 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "Email",
 			icon: "fa7-solid:envelope",
-			url: "mailto:3096988363@qq.com",
+			url: "mailto:jinzi0619@163.com",
 			showName: false,
 		},
 		{
