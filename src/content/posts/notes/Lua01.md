@@ -518,11 +518,56 @@ for k,v in pairs(person) do
 end
 print("**********字典的遍历2************")
 for k in pairs(person) do
-    print(k)
-    print(person[k])
+    print(k,person[k])
 end
 ```
 我们可以同时遍历键和值，也可以通过遍历键获取对应的值来遍历字典。    
 当然k和v，只是一个推荐命名,分别是key和value的首字母，虽然不用不报错，但用它们可以增加代码可读性。     
 同理如果你只想遍历值，不在乎键，可以把k换成 " _ " ,这样看到这段代码就知道键不重要。  
 ### 4,类和结构体
+#### 类的定义
+在lua中，是没有面向对象的，不过我们可以自己去实现这样的功能。  
+```lua
+Student = {
+    --年龄
+    age = 17,
+    --性别，true表示男，false表示女
+    sex = true,
+    --学习函数
+    Learn = function()
+    
+        --想要在表内部函数中 调用表本身的属性或者方法
+        --一定要指定是谁的 所以要使用 表名.属性 或 表名.方法
+        --不能像是print(sex)获取，这个sex不会是表的属性,而是一个全局变量
+        print(Student.sex)   --这里的Student是表自身的变量
+        print("学习中")
+    end,
+    --成长函数
+    Up = function(t)
+        --我们可以通过把表作为参数传入进来的方式
+        --这样就可以获取
+        t.age = t.age + 1
+        print("年龄是"..t.age)
+        
+        print("我又长大了一岁")
+    end
+}
+```
+
+调用类的成员函数，有**两种**方式  
+- ``Student.Up(Student)``通过.函数 来调用
+- ``Student:Up()``  通过冒号来调用时，会把自己作为第一个参数传入进去。  
+在声明表后也可以继续为表添加变量和成员。
+```lua
+Student.name = "星尘"
+Student.Speak = function()
+    print("今天天气真好")
+end
+--使用冒号声明会把自身作为参数
+function Student:Speak2()
+    --在lua中 有一个关键字 self 表示 默认传入的第一个参数
+    print(self.name .. ":今天天气真好")
+end
+```
+
+### 一些公有方法
