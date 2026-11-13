@@ -4,6 +4,8 @@
 
 # 联系方式
 - 邮箱 : jinzi0619@163.com
+- Github:[xingchen-jin (Jiawei Jin)](https://github.com/xingchen-jin)
+- B站:[星尘qwe的个人空间-星尘qwe个人主页-哔哩哔哩视频](https://space.bilibili.com/336126553?spm_id_from=333.1007.0.0)
 
 ---
 
