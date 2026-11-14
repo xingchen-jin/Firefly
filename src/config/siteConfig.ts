@@ -6,10 +6,10 @@ const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
 	// 站点标题
-	title: "xingchen's blog",
+	title: "星尘",
 
 	// 站点副标题
-	subtitle: "xingchenのblog",
+	subtitle: "星尘の部屋",
 
 	// 站点 URL
 	site_url: "https://xingchen-blog.com",
