@@ -608,7 +608,49 @@ print(str)
 ## 十二，大G表
 _ G表是Lua中的总表(table)，它保存了我们声明的所有全局变量，由于是表，可以通过pairs遍历。  
 若想通过大G表获取某一个变量，中括号里输入变量名即可``_G["变量名"]``  
-通过大G表修改变量也可以````_G["变量名"] = newValue``  
+通过大G表修改变量也可以``_G["变量名"] = newValue``
+## 十三,协同程序
+### 什么是协程
+协同程序是一种编程概念，允许程序间以协作的方式运行，而不是竞争资源。在协同程序中，程序可以执行到某个点暂停（挂起点），让出控制权给调用者，稍后再从该点恢复执行接下来的逻辑。从而允许非抢占式的多任务处理。  
+### 创建以及运行协程
+可以有两种方式创建
+- ``co = coroutine.create(fun)`` 对应的调用方式``coroutine.resume(co)``
+- ``co2 = coroutine.wrap(fun)``对应的调用方式``coroutine.resume(co)``
+在lua中协程是一种数据类型 - thread。  
+### 挂起协程
+```lua
+local fun2 = function( )
+    local i = 1
+    
+    while true do
+        print(i)
+        i = i + 1
+        print(coroutine.status(co3)) --获取协程状态
+	    print(coroutine.running())  --获取正在运行的线程号
+         --协程的挂起函数
+        --i为返回值
+        coroutine.yield(i)
+    end
+end
+--对于使用resume调用的协程，会默认接收第一个返回值为协程是否启动成功，然后才是yield里的返回值
+co3 = coroutine.create(fun2)
+local isOk, tempI = coroutine.resume(co3)
+
+--对于用wrap创建的协程，没有默认的第一个返回值
+co4 = coroutine.wrap(fun2)
+tempI = co4()
+print("返回值"..tempI)
+```
+
+### 协程的状态
+我们可以通过``coroutine.status(协程对象)``来获取协程的状态
+- dead 结束
+- suspended 暂停
+- running 进行中
+可以通过``coroutine.running()``来获取正在运行的线程号。
+## 十四，元表
+
+
 
 ## 参考
 - 唐老狮《Unity 热更新 / Lua 系列课程》相关章节
