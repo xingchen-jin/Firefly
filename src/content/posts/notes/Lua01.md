@@ -1,5 +1,5 @@
 ---
-title: Lua入门（更新中）
+title: Lua基础语法
 published: 2026-11-11
 pinned: false
 description: 一个详细的lua入门攻略，写得最用心的一集
@@ -588,13 +588,15 @@ lua为表提供了一系列常用的公共方法，包括插入,删除，排序�
 	
 - 拼接:
 ```lua
-t = {"音无结弦之时，","跃动天使之心。","立于浮华之世，","奏响天籁之音。"}
+t = {"你好,","世界!","Hello,","World!"}
 --连接函数 用于拼接表中元素 返回值 是一个字符串.
 --第一个参数代表需要拼接的表，第二个参数代表连接词。这里是用换行符'\n'连接这些字符串
 --只能拼接 字符串或数字 元素，如果表中包含表、布尔值等，会报错。
 str = table.concat(t, "\n")
 print(str)
 ```
+- 查找: ``rawget(table,index)``查找表中有没有该键(或索引)，返回Value。
+- 设置：``rawset(table,key,value)`` 设置表的键为新值
 ## 十一，多脚本运行（模块化）
 ### 脚本执行和卸载
 所谓多脚本执行，就是通过一个脚本执行另一个脚本的方式，串起多个脚本。  
@@ -650,6 +652,169 @@ print("返回值"..tempI)
 可以通过``coroutine.running()``来获取正在运行的线程号。
 ## 十四，元表
 
+元表的本质是一个table，它存储了元方法，用于改变table的行为，每个行为关联了对应的元方法。    
+任何一个table都可以作为另一个table的元表，当我们执行子表中的特定操作时，会执行元表的内容·。   
+### 1,设置元表
+``setmetatable(子表, 元表)``设置元表,两个参数均为table类型。
+``getmetatable (object)``查询元表，有则返回元表，如果没有则返回nil。  
+
+### 2,元方法
+#### \_\_index（重点）
+当通过键来访问table的时候，若table不含该键，则会在访问元表中的 \_\_index 键。若\_\_index是一个table   
+```lua
+metaFather = {
+    num = 3,
+    age = 18
+}
+--__index指向自身的赋值 写在表外面来初始化
+metaFather.__index = metaFather
+
+meta = {
+    num = 2
+}
+meta.__index = meta
+
+myTable = {
+ 
+}
+
+setmetatable(meta, metaFather)
+setmetatable(myTable, meta)
+
+print(myTable.num)  --2
+print(myTable.age)  --18
+print(rawget(myTable, "num"))  --nil，使用rawget获取值，不触发元方法
+
+```
+当自己的元表也没有时，会访问自己元表的元表，这种链式查找。   
+
+#### \_\_newIndex
+当需要给table赋值时，当table里没有这个键时，会给__newIndex进行赋值。
+```lua
+meta = {}
+meta.__newindex = {}
+myTable = {}
+setmetatable(myTable, meta)
+myTable.age = 1
+print(myTable.age)           -- nil
+print(meta.age)              -- nil   ← 不是 1
+print(meta.__newindex.age)   -- 1     ← 赋值落在这里
+
+--rawset 该方法 会忽略newindex的设置 只会该自己的变量
+rawset(myTable, "age", 2) 
+print(myTable.age)   --2
+```
+#### \_\_tostring
+当子表要被当做字符串使用时 会默认调用这个元表中的\_\_tostring。
+``` lua
+meta  = {
+	--t为表自身
+    __tostring = function(t)
+        local sum = 0
+        for k, v in pairs(t) do
+            sum = sum + v
+        end
+        return "所有值的和: " .. sum
+    end
+}
+myTable = {
+    1, 2, 3, 4, 5
+}
+setmetatable(myTable, meta)
+print(myTable)
+```
+**注意**:当使用..连接字符串时，是不会调用tostring的，这时还是会把它当作表来看待，所以会报错。
+#### \_\_call
+当表当作方法被调用时，会发生此事件。会在元表查找该元方法，如果存在调用该方法。  
+```lua
+meta2 = {
+    __tostring = function(v)
+        return v.name
+    end,
+    --第一个参数是调用者自己 第二个参数是传入的参数
+    __call = function(v1, v2)
+        print(v1) --触发__tostring方法
+        print(v2)
+    end
+}
+myTable2 = {
+    name = "友人A"
+}
+setmetatable(myTable2, meta2)
+myTable2("你好")  --你好
+				 --友人A
+```
+#### 运算符重载
+在lua中我们默认无法对两个表进行运算，所以提供了一系列运算符重载的元方法。   
+```lua
+meta3 = {
+    --相当于运算符重载 当子表使用+运算符时 会调用该方法
+    --运算符+
+    __add = function(t1, t2)
+        return t1.age + t2.age
+    end,
+    --运算符-
+    __sub = function(t1, t2)
+        return t1.age - t2.age
+    end,
+    --运算符*
+    __mul = function(t1, t2)
+        return 1
+    end,
+    --运算符/
+    __div = function(t1, t2)
+        return 2
+    end,
+
+    --运算符%
+    __mod = function(t1, t2)
+        return 3
+    end,
+    --运算符^
+    __pow = function(t1, t2)
+        return 4
+    end,
+    --运算符==
+    __eq = function(t1, t2)
+        return true
+    end,
+    --运算符<
+    __lt = function(t1, t2)
+        return true
+    end,
+    --运算符<=
+    __le = function(t1, t2)
+        return false
+    end,
+    --运算符..
+    __concat = function(t1, t2)
+        return "567"
+    end
+}
+
+m1 = {age = 1}
+setmetatable(m1, meta3)
+m2 = {age = 1}
+setmetatable(m2, meta3)
+m3 = {age = 2}
+setmetatable(m3, meta3)
+
+print(m1 + m3)
+print(m1 - m3)
+print(m1 * m3)
+print(m1 / m3)
+print(m1 % m3)
+print(m1 ^ m3)
+
+--如果要用条件运算符 来比较两个对象
+--这两个对象的元表一定要一致 才能准确调用方法
+print(m1 == m3)
+print(m1 > m3)
+print(m1 < m3)
+print(m1 <= m3)
+  
+print(m1 .. m3)
+```
 
 
 ## 参考
